@@ -17,8 +17,6 @@ using a set of simple asynchronous functions.
 
 **AgroProvider** is a Combine publisher and subscriber for network events, such that you need to keep a strong reference to it. 
 
-Typically [**OpenWeather Agro API**](https://agromonitoring.com/) can only deal with one request at a time. So you need to wait until it has finished before sending another request.
-
 See **ContentView** for some example use.
 
 ### References
