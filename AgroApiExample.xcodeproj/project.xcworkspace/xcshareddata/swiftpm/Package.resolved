@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "AgroAPI",
-        "repositoryURL": "https://github.com/workingDog/AgroApi.git",
+        "repositoryURL": "https://github.com/workingDog/AgroAPI.git",
         "state": {
           "branch": null,
-          "revision": "2542121a02c55a6e5cf4f04f733acfbe4d33bed9",
-          "version": "0.1.1"
+          "revision": "55183913827818f637ad5cfafe4a5a2258d401f6",
+          "version": "0.1.2"
         }
       }
     ]

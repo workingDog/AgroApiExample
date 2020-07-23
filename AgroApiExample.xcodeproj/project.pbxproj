@@ -13,8 +13,8 @@
 		C70D154624C7EEEE00613AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C70D154524C7EEEE00613AFA /* Assets.xcassets */; };
 		C70D154924C7EEEE00613AFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C70D154824C7EEEE00613AFA /* Preview Assets.xcassets */; };
 		C70D154C24C7EEEE00613AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70D154A24C7EEEE00613AFA /* LaunchScreen.storyboard */; };
+		C748476924C90F1000B38F32 /* AgroAPI in Frameworks */ = {isa = PBXBuildFile; productRef = C748476824C90F1000B38F32 /* AgroAPI */; };
 		C7C291D524C8FF1000335486 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C7C291D424C8FF1000335486 /* readme.md */; };
-		C7E511C924C7F33E009493B0 /* AgroAPI in Frameworks */ = {isa = PBXBuildFile; productRef = C7E511C824C7F33E009493B0 /* AgroAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7E511C924C7F33E009493B0 /* AgroAPI in Frameworks */,
+				C748476924C90F1000B38F32 /* AgroAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 			);
 			name = AgroApiExample;
 			packageProductDependencies = (
-				C7E511C824C7F33E009493B0 /* AgroAPI */,
+				C748476824C90F1000B38F32 /* AgroAPI */,
 			);
 			productName = AgroApiExample;
 			productReference = C70D153C24C7EEED00613AFA /* AgroApiExample.app */;
@@ -129,7 +129,7 @@
 			);
 			mainGroup = C70D153324C7EEED00613AFA;
 			packageReferences = (
-				C7E511C724C7F33E009493B0 /* XCRemoteSwiftPackageReference "AgroApi" */,
+				C748476724C90F1000B38F32 /* XCRemoteSwiftPackageReference "AgroAPI" */,
 			);
 			productRefGroup = C70D153D24C7EEED00613AFA /* Products */;
 			projectDirPath = "";
@@ -365,20 +365,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C7E511C724C7F33E009493B0 /* XCRemoteSwiftPackageReference "AgroApi" */ = {
+		C748476724C90F1000B38F32 /* XCRemoteSwiftPackageReference "AgroAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/workingDog/AgroApi.git";
+			repositoryURL = "https://github.com/workingDog/AgroAPI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
+				minimumVersion = 0.1.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C7E511C824C7F33E009493B0 /* AgroAPI */ = {
+		C748476824C90F1000B38F32 /* AgroAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C7E511C724C7F33E009493B0 /* XCRemoteSwiftPackageReference "AgroApi" */;
+			package = C748476724C90F1000B38F32 /* XCRemoteSwiftPackageReference "AgroAPI" */;
 			productName = AgroAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
