@@ -32,7 +32,7 @@ struct ContentView: View {
 //        test2()
 //        test3()
 //        test4()
-//        test5()
+   //     test5()
 //        test6()
 //        test7()
 //        test8()
@@ -75,13 +75,13 @@ struct ContentView: View {
     }
     
     func test5() {
-        agroProvider.getForecastWeather(id: "5f13ab437c4b528273e0bac5"){ response in
+        agroProvider.getForecastWeather(id: "5f13ab46714b528c73e0bac5"){ response in
             print("\n---> test5 getForecastWeather response: \(response)")
         }
     }
     
     func test6() {
-        let options = AgroOptions(polygon_id: "5f13ab437c4b528273e0bac5",
+        let options = AgroOptions(polygon_id: "5f13ab46714b528c73e0bac5",
                                   start: Date().addingTimeInterval(-60*60*24*10).utc,
                                   end: Date().utc)
         
@@ -91,7 +91,7 @@ struct ContentView: View {
     }
     
     func test7() {
-        let options = WeatherOptions(polygon_id: "5f13ab437c4b528273e0bac5",
+        let options = WeatherOptions(polygon_id: "5f13ab46714b528c73e0bac5",
                                      start: Date().addingTimeInterval(-60*60*6).utc,
                                      end: Date().utc)
         
@@ -101,14 +101,15 @@ struct ContentView: View {
     }
     
     func test8() {
-        agroProvider.updatePoly(id: "5f13ab437c4b528273e0bac5", name: "test2") { response in
+        agroProvider.updatePoly(id: "5f13ab46714b528c73e0bac5", name: "test2") { response in
             print("\n---> test8 updatePoly response: \(response)")
         }
     }
     
     func test9() {
-        let options = AgroOptions(polygon_id: "5f13ab437c4b528273e0bac5",
-                                  start: Date().addingTimeInterval(-60*60*24*20).utc,
+        //  5f15573c714b52665be0bb1e
+        let options = AgroOptions(polygon_id: "5f15573c714b52665be0bb1e",
+                                  start: Date().addingTimeInterval(-60*60*24*30).utc,
                                   end: Date().utc)
         
         agroProvider.getImagery(options: options) { imagery in
@@ -116,14 +117,14 @@ struct ContentView: View {
             
             if let resp = imagery?.first {
                 
-//                if let stats = resp.stats {
-//                    print("\n----> test9 stats: \(stats)")
-//                    if let ndviUrl = stats.evi {
-//                        self.agroProvider.getStatsInfo(urlString: ndviUrl) { statInfo in
-//                            print("\n----> test9 getStatsInfo: \(statInfo)")
-//                        }
-//                    }
-//                }
+                if let stats = resp.stats {
+                    print("\n----> test9 stats: \(stats)")
+                    if let ndviUrl = stats.evi {
+                        self.agroProvider.getStatsInfo(urlString: ndviUrl) { statInfo in
+                            print("\n----> test9 getStatsInfo: \(statInfo)")
+                        }
+                    }
+                }
                 
                 // not yet working
 //                if let tile = resp.tile {
@@ -141,7 +142,7 @@ struct ContentView: View {
                         self.agroProvider.getPngUIImage(urlString: theUrl, paletteid: 1, reponse: self.$uiImage)
                     }
                 }
-                
+//
 //                if let tiff = resp.data {
 //                    print("\n----> test9 tiff: \(tiff)")
 //                    if let theUrl = tiff.ndvi {
