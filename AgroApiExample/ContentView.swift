@@ -14,7 +14,7 @@ import AgroAPI
 struct ContentView: View {
     
     // this must be a strong reference, ie outside of loadData()
-    let agroProvider = AgroProvider(apiKey: "your-key")
+    let agroProvider = AgroProvider(apiKey: "your key")
     
     @State var uiImage: UIImage = UIImage()
     
@@ -29,7 +29,7 @@ struct ContentView: View {
     func loadData() {
         
         test1()
-//        test2()
+        test2()
 //        test3()
 //        test4()
    //     test5()
@@ -47,7 +47,7 @@ struct ContentView: View {
     }
     
     func test2() {
-        agroProvider.getCurrentWeather(id: "5f13ab46714b528c73e0bac5"){ response in
+        agroProvider.getCurrentWeather(id: "5f15573c714b52665be0bb1e"){ response in
             print("\n---> test2 getCurrentWeather response: \(response)")
         }
     }
@@ -79,21 +79,22 @@ struct ContentView: View {
             print("\n---> test5 getForecastWeather response: \(response)")
         }
     }
-    
+
     func test6() {
         let options = AgroOptions(polygon_id: "5f13ab46714b528c73e0bac5",
-                                  start: Date().addingTimeInterval(-60*60*24*10).utc,
-                                  end: Date().utc)
+                                  start: Date().addingTimeInterval(-60*60*24*10),
+                                  end: Date())
         
         agroProvider.getHistoricalNDVI(options: options) { response in
             print("\n---> test6 getHistoricalNDVI response: \(response)")
         }
     }
     
+    // need authorisation
     func test7() {
-        let options = WeatherOptions(polygon_id: "5f13ab46714b528c73e0bac5",
-                                     start: Date().addingTimeInterval(-60*60*6).utc,
-                                     end: Date().utc)
+        let options = WeatherOptions(polygon_id: "5f15573c714b52665be0bb1e",
+                                     start: Date().addingTimeInterval(-60*60*6),
+                                     end: Date())
         
         agroProvider.getHistoricalWeather(options: options){ response in
             print("\n---> test7 getHistoricalWeather response: \(response)")
@@ -107,10 +108,9 @@ struct ContentView: View {
     }
     
     func test9() {
-        //  5f15573c714b52665be0bb1e
         let options = AgroOptions(polygon_id: "5f15573c714b52665be0bb1e",
-                                  start: Date().addingTimeInterval(-60*60*24*30).utc,
-                                  end: Date().utc)
+                                     start: Date().addingTimeInterval(-60*60*24*30),
+                                     end: Date())
         
         agroProvider.getImagery(options: options) { imagery in
             print("\n---> test9 getImagery imagery: \(imagery)")
